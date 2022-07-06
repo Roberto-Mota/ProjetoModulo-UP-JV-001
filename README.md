@@ -1,20 +1,26 @@
-## Getting Started
+## Projeto do módulo UP-JV-001
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Enunciado
 
-## Folder Structure
+Crie uma aplicação que simule uma app bancária. Os clientes podem ser pessoa física ou jurídica, sendo que para PJ existe a cobrança de uma taxa de 0.5% para cada saque ou transferência. Além do produto conta-corrente, os clientes PF podem abrir uma conta-poupança e conta-investimento. Clientes PJ não abrem poupança, mas seus rendimentos em conta-investimento rendem 2% a mais.
 
-The workspace contains two folders by default, where:
+Crie as funcionalidades: abrir conta, sacar, depositar, transferência, investir e consultar saldo (poupança e corrente).
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Use a classe "Aplicacao" para criar seu método "main" e demonstrar o funcionamento do seu código.
+Entrega
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+A entrega deverá ser feita fornecendo o link Github do projeto.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Prazo: 11/07
 
-## Dependency Management
+## Avaliação
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Serão avaliados os seguintes quesitos:
+
+   - Completude das funcionalidades
+   - Aplicação das regras de negócio
+   - Modelagem de domínio orientado a objetos
+   - Aplicação de encapsulamento, abstração e polimorfismo
+
 
 
