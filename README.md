@@ -13,6 +13,23 @@ A entrega deverá ser feita fornecendo o link Github do projeto.
 
 Prazo: 11/07
 
+## Tasks
+
+[ ] - Aplicação (Mini-menu interativo CLI)
+
+[ ] - Criar classes ContaPoupanca, ContaCorrente e ContaInvestimento
+    (x) |-> method abrirConta
+    (x) |-> method sacar
+    (x) |-> method depositar
+    (x) |-> method transferência
+    (x) |-> method investir
+    ( ) |-> method consultar saldo
+
+[ ] - Criar classes pessoas fisica e juridica que extendem cliente
+    (x) |-> Pj tem taxa de 0.5% para cada saque ou transferência
+    (x) |-> PJ não pode abrir conta poupanca
+    (x) |-> Pj tem +2% nos rendimentos de conta investimento
+
 ## Avaliação
 
 Serão avaliados os seguintes quesitos:

@@ -6,32 +6,32 @@ import cliente.Cliente;
 
 public class ContaCorrente extends Conta {
 
-    private ContaCorrente(int agencia, int numero, Cliente cliente) {
+    private ContaCorrente(Integer agencia, Integer numero, Cliente cliente) {
         super(agencia, numero, cliente);
+        this.setTipoConta(TipoConta.CORRENTE);
     }
 
-    @Override
-    public Conta abrirConta(int agencia, int numero, Cliente cliente) {
+    public static ContaCorrente abrirContaCorrente(Integer agencia, Integer numero, Cliente cliente) {
         return new ContaCorrente(agencia, numero, cliente);
     }
 
     @Override
-    public void depositar(BigDecimal valor) {
+    public void depositar(Double valor) {
         super.depositar(valor);
     }
 
     @Override
-    public void investir(BigDecimal valor) {
+    public void investir(Double valor) {
         super.investir(valor);
     }
 
     @Override
-    public void sacar(BigDecimal valor) {
+    public void sacar(Double valor) {
         super.sacar(valor);
     }
 
     @Override
-    public void transferencia(Conta destino, BigDecimal valor) {
+    public void transferencia(Conta destino, Double valor) {
         super.transferencia(destino, valor);
     }
 
