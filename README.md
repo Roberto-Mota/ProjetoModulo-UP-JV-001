@@ -15,24 +15,24 @@ Prazo: 11/07
 
 ## Tasks
 
-\[ ] - Aplicação (Mini-menu interativo CLI)
-\
-\[ ] - Criar classes ContaPoupanca, ContaCorrente e ContaInvestimento
-    \(x) |-> method abrirConta
-    \(x) |-> method sacar
-    \(x) |-> method depositar
-    \(x) |-> method transferência
-    \(x) |-> method investir
-    \( ) |-> method consultar saldo
-\
-\[ ] - Criar classes pessoas fisica e juridica que extendem cliente
-    \(x) |-> Pj tem taxa de 0.5% para cada saque ou transferência
-    \(x) |-> PJ não pode abrir conta poupanca
-    \(x) |-> Pj tem +2% nos rendimentos de conta investimento
+1. [ ] - Aplicação (Mini-menu interativo CLI)
+
+2. [ ] - Criar classes ContaPoupanca, ContaCorrente e ContaInvestimento
+    - [x] |-> method abrirConta <br>
+    - [x] |-> method sacar <br>
+    - [x] |-> method depositar <br>
+    - [x] |-> method transferência <br>
+    - [x] |-> method investir <br>
+    - [ ] |-> method consultar saldo <br>
+
+3. [x] - Criar classes pessoas fisica e juridica que extendem cliente
+      - [x] |-> Pj tem taxa de 0.5% para cada saque ou transferência <br>
+      - [x] |-> PJ não pode abrir conta poupanca <br>
+      - [x] |-> Pj tem +2% nos rendimentos de conta investimento <br>
 
 ## Avaliação
 
-\Serão avaliados os seguintes quesitos:
+Serão avaliados os seguintes quesitos:
 
    - Completude das funcionalidades
    - Aplicação das regras de negócio
