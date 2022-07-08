@@ -1,6 +1,6 @@
 package cliente;
 
-public class Cliente {
+public abstract class Cliente {
     String nome;
 
     public Cliente(String nome) {

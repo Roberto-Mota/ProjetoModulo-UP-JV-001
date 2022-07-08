@@ -13,6 +13,7 @@ public class Aplicacao {
             Boolean cadastrandoCliente = true;
             Scanner scan = new Scanner(System.in);
             Cliente cliente = null;
+            Conta conta = null;
 
             while (cadastrandoCliente) {
                 int tipoPessoa = 0;
@@ -24,8 +25,9 @@ public class Aplicacao {
                 Boolean hasChosenTipoCliente = false;
                 System.out.println("Escolha o tipo de cliente: ");
                 while (!hasChosenTipoCliente) {
-                    System.out.println("Digite 1 para Pessoa Jurídica");
-                    System.out.println("Digite 2 para Pessoa Física");
+                    System.out.println("Digite o número para selecionar o tipo de cliente: ");
+                    System.out.println("1 -> para Pessoa Jurídica");
+                    System.out.println("2 -> para Pessoa Física");
                     String choice = scan.next();
                     if (Integer.valueOf(choice) == 1) {
                         System.out.println("Prosseguindo para cadastro de Pessoa Jurídica");
@@ -89,9 +91,26 @@ public class Aplicacao {
                     // Gerar um número aleatório para agência e Número de Conta
 
                 }
-                Conta conta = Conta.abrirConta(agencia, numeroConta, cliente, tipoConta);
+                conta = Conta.abrirConta(agencia, numeroConta, cliente, tipoConta);
                 System.out.println(conta);
             } // Término do cadastro da conta
+            //Criação de uma conta dummy para realização de transferência
+            Cliente clienteDummy = new ClientePessoaFisica("Nuno Passos", "000111222333");
+            // Inicio das operações com a conta
+
+            //Qual operação deseja fazer?
+
+            //sacar
+
+            //depositar
+
+            //transferencia
+
+            //investir
+
+
+
+
         }
     }
 }
