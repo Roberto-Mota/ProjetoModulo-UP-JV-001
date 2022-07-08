@@ -1,7 +1,5 @@
 package conta;
 
-import java.math.BigDecimal;
-
 import cliente.Cliente;
 
 public class ContaCorrente extends Conta {

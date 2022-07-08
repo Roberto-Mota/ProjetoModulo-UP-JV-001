@@ -6,7 +6,7 @@ import java.security.InvalidParameterException;
 
 import cliente.Cliente;
 import cliente.ClientePessoaJuridica;
-import exceptions.InvalidClientType;
+import exceptions.InvalidClientTypeException;
 
 public abstract class Conta {
     protected BigDecimal saldo = new BigDecimal(120);
@@ -44,10 +44,8 @@ public abstract class Conta {
         this.cliente = cliente;
     }
 
-    // Aparentemente eu posso usar o super(parametros da classe mae) e
-    // this.restodascoisas do filho (testar depois)
     public static Conta abrirConta(Integer agencia, Integer numero, Cliente cliente, TipoConta TipoConta)
-            throws InvalidParameterException, InvalidClientType {
+            throws InvalidParameterException, InvalidClientTypeException {
         switch (TipoConta) {
             case CORRENTE:
                 return ContaCorrente.abrirContaCorrente(agencia, numero, cliente);
@@ -57,14 +55,15 @@ public abstract class Conta {
 
             case POUPANCA:
                 if (cliente instanceof ClientePessoaJuridica) {
-                    throw new InvalidClientType("O tipo de cliente é inválido para o tipo de conta requisitado.");
+                    throw new InvalidClientTypeException(
+                            "O tipo de cliente é inválido para o tipo de conta requisitado.");
+                } else {
+                    return ContaPoupanca.abrirContaPoupanca(agencia, numero, cliente);
                 }
-                return ContaPoupanca.abrirContaPoupanca(agencia, numero, cliente);
 
             default:
                 throw new InvalidParameterException();
         }
-        // return new Conta(agencia, numero, cliente);
     }
 
     public Boolean validarConta(Integer agencia, Integer numero, Cliente cliente) {
@@ -76,7 +75,6 @@ public abstract class Conta {
     }
 
     public void sacar(Double valor) {
-        // Pj tem taxa de 0.5% para cada saque ou transferência
         Double saque = valor;
         if (this.cliente instanceof ClientePessoaJuridica) {
             valor = valor * 1.005;
@@ -106,7 +104,7 @@ public abstract class Conta {
             if (this.cliente instanceof ClientePessoaJuridica && this.tipoConta == TipoConta.INVESTIMENTO) {
                 jurosInvestimento += 2;
             }
-            try{
+            try {
                 System.out.println("Valor investido...");
                 Thread.sleep(2000);
                 System.out.println("... 2 meses depois ...");
@@ -117,8 +115,8 @@ public abstract class Conta {
                 this.setSaldo(BigDecimal.valueOf(valor));
                 System.out.printf("Parabéns pelo investimento.\nAplicação: R$%.2f\nJuros: %.2f%%\nLucro: R$%.2f",
                         valorAplicado, Conta.getJurosInvestimento(), valor);
-            
-            }catch(InterruptedException ex){
+
+            } catch (InterruptedException ex) {
                 System.out.println("Investimento interrompido");
             }
         }
