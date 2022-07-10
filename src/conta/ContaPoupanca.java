@@ -17,23 +17,23 @@ public class ContaPoupanca extends Conta {
     }
 
     @Override
-    public void depositar(Double valor) {
-        super.depositar(valor);
+    public Boolean depositar(Double valor) {
+        return super.depositar(valor);
     }
 
     @Override
-    public void investir(Double valor) {
-        super.investir(valor);
+    public Boolean investir(Double valor) {
+        return super.investir(valor);
     }
 
     @Override
-    public void sacar(Double valor) {
-        super.sacar(valor);
+    public Boolean sacar(Double valor) {
+        return super.sacar(valor);
     }
 
     @Override
-    public void transferencia(Conta destino, Double valor) {
-        super.transferencia(destino, valor);
+    public Boolean transferencia(Conta destino, Double valor) {
+        return super.transferencia(destino, valor);
     }
 
     @Override

@@ -14,52 +14,27 @@ public class ContaCorrente extends Conta {
     }
 
     @Override
-    public void depositar(Double valor) {
-        super.depositar(valor);
+    public Boolean depositar(Double valor) {
+        return super.depositar(valor);
     }
 
     @Override
-    public void investir(Double valor) {
-        super.investir(valor);
+    public Boolean investir(Double valor) {
+        return super.investir(valor);
     }
 
     @Override
-    public void sacar(Double valor) {
-        super.sacar(valor);
+    public Boolean sacar(Double valor) {
+        return super.sacar(valor);
     }
 
     @Override
-    public void transferencia(Conta destino, Double valor) {
-        super.transferencia(destino, valor);
-    }
-
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        // TODO Auto-generated method stub
-        return super.clone();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        // TODO Auto-generated method stub
-        return super.equals(obj);
-    }
-
-    @Override
-    protected void finalize() throws Throwable {
-        // TODO Auto-generated method stub
-        super.finalize();
-    }
-
-    @Override
-    public int hashCode() {
-        // TODO Auto-generated method stub
-        return super.hashCode();
+    public Boolean transferencia(Conta destino, Double valor) {
+        return super.transferencia(destino, valor);
     }
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
         return super.toString();
     }
     
