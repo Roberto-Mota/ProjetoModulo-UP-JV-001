@@ -1,11 +1,8 @@
 package conta;
 
-import java.math.BigDecimal;
-
 import cliente.Cliente;
 
 public class ContaPoupanca extends Conta {
-
 
     private ContaPoupanca(Integer agencia, Integer numero, Cliente cliente) {
         super(agencia, numero, cliente);

@@ -8,6 +8,7 @@ import conta.ContaCorrente;
 import conta.TipoConta;
 
 public class Aplicacao {
+    // Menu CLI simples sem muita validação, apenas um POC.
     public static void main(String[] args) throws Exception {
         Scanner scan = new Scanner(System.in);
         Boolean criandoContaCliente = true;

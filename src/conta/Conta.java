@@ -44,6 +44,7 @@ public abstract class Conta {
         this.cliente = cliente;
     }
 
+    // Procurei encapsular o construtor para que apenas seja construído o objeto caso tenha alguma verificação anterior
     public static Conta abrirConta(Integer agencia, Integer numero, Cliente cliente, TipoConta TipoConta)
             throws InvalidParameterException, InvalidClientTypeException {
         switch (TipoConta) {
