@@ -15,15 +15,15 @@ Prazo: 11/07
 
 ## Tasks
 
-1. [ ] - Aplicação (Mini-menu interativo CLI)
+1. [x] - Aplicação (Mini-menu interativo CLI)
 
-2. [ ] - Criar classes ContaPoupanca, ContaCorrente e ContaInvestimento
+2. [x] - Criar classes ContaPoupanca, ContaCorrente e ContaInvestimento
     - [x] |-> method abrirConta <br>
     - [x] |-> method sacar <br>
     - [x] |-> method depositar <br>
     - [x] |-> method transferência <br>
     - [x] |-> method investir <br>
-    - [ ] |-> method consultar saldo <br>
+    - [x] |-> method consultar saldo <br>
 
 3. [x] - Criar classes pessoas fisica e juridica que extendem cliente
       - [x] |-> Pj tem taxa de 0.5% para cada saque ou transferência <br>
