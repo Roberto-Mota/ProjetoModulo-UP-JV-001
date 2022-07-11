@@ -110,7 +110,7 @@ public class Aplicacao {
             // Qual operação deseja fazer?
             System.out.println("Qual operação deseja fazer?");
             System.out.println(
-                    "1 -> Sacar\n2 -> Depositar\n3 -> Transferencia\n4 -> Investir\n5 -> Encerrar atendimento");
+                    "1 -> Ver Saldo\n2 -> Sacar\n3 -> Depositar\n4 -> Transferencia\n5 -> Investir\n6 -> Encerrar atendimento");
 
             
             // Demonstra ser importante o tratamento do Input do usuário.
@@ -122,7 +122,14 @@ public class Aplicacao {
             String input;
 
             switch (opcaoInteger) {
-                case 1: // Sacar
+                case 1: // Ver saldo
+                    System.out.println("Opção de ver saldo selecionada");
+                    System.out.println("Saldo atual da conta: R$" + contaUser.getSaldo());
+                            // scan = scan.reset();
+                            break;
+                        
+                    
+                case 2: // Sacar
                     System.out.println("Opção de saque selecionada");
                     System.out.println("Digite o valor desejado para saque:");
                     while (!isSuccessful) {
@@ -139,7 +146,7 @@ public class Aplicacao {
                     }
                     break;
 
-                case 2: // Depositar
+                case 3: // Depositar
                     System.out.println("Opção de depósito selecionada");
                     System.out.println("Digite o valor desejado para depósito:");
                     while (!isSuccessful) {
@@ -155,7 +162,7 @@ public class Aplicacao {
                     }
                     break;
 
-                case 3: // Transferência
+                case 4: // Transferência
                     System.out.println("Opção de transferencia selecionada");
                     System.out.println("Digite o valor desejado para transferencia:");
                     System.out
@@ -173,7 +180,7 @@ public class Aplicacao {
                     }
                     break;
 
-                case 4: // Investir
+                case 5: // Investir
                     System.out.println("Opção de investimento selecionada");
                     System.out.println("Digite o valor desejado para investir:");
                     while (!isSuccessful) {
@@ -189,7 +196,7 @@ public class Aplicacao {
                     }
 
                     break;
-                case 5: // Encerrar Atendimento
+                case 6: // Encerrar Atendimento
                     System.out.println("Opção de encerrar atendimento selecionada, tenha um bom dia");
                     operando = false;
                     break;
